@@ -5,7 +5,7 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/everspader/profiles-rest-api.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
+PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api/'
 
 echo "Installing dependencies..."
 apt-get update
@@ -14,6 +14,8 @@ apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx g
 # Create project directory
 mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
+
+PROJECT_BASE_PATH = '${PROJECT_BASE_PATH}/src/'
 
 # Create virtual environment
 mkdir -p $PROJECT_BASE_PATH/env
