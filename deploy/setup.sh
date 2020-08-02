@@ -15,8 +15,6 @@ apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx g
 mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
-echo $PROJECT_BASE_PATH
-PROJECT_BASE_PATH="$PROJECT_BASE_PATH/src"
 
 # Create virtual environment
 mkdir -p $PROJECT_BASE_PATH/env
